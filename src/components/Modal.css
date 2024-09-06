@@ -18,6 +18,8 @@
     width: 80%;
     max-width: 1050px;
     position: relative;
+    overflow-y: auto;
+    overflow-x: auto;
   }
   
   .modal-close {
