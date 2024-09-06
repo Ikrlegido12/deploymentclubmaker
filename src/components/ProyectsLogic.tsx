@@ -58,9 +58,9 @@ const ProjectsLogic = () => {
               ))}
             </ul>
             <h3 className="text-xl font-semibold mb-2 text-teal-300">Premios</h3>
-            <ul className="list-disc list-inside mb-4 text-gray-300">
+            <ul className="a">
               {selectedProject.galardones.map((puesto, competicion, index) => (
-                <li key={index}>{puesto} - {competicion}</li>
+                <li key={index}>{puesto}</li>
               ))}
             </ul>
             <h3 className="text-xl font-semibold mb-2 text-teal-300">Galería</h3>
