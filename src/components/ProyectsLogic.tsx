@@ -51,7 +51,6 @@ const ProjectsLogic = () => {
             </li>
             </ul>
             <p className="text-gray-300 mb-4">{selectedProject.descripcionDetallada}</p>
-            <img src={selectedProject.imagen} alt={selectedProject.titulo} className="w-full h-64 object-cover rounded-lg mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-teal-300">Creadores</h3>
             <ul className="list-disc list-inside mb-4 text-gray-300">
               {selectedProject.creadores.map((creador, index) => (

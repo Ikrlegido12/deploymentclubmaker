@@ -1,4 +1,5 @@
-.imagen {
-    max-width: 400px;
-    max-height: 400px;
+img {
+    display: inline-block;
+    max-width: 325px;
+    max-height: 325px;
 }
