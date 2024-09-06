@@ -57,6 +57,12 @@ const ProjectsLogic = () => {
                 <li key={index}>{creador}</li>
               ))}
             </ul>
+            <h3 className="text-xl font-semibold mb-2 text-teal-300">Premios</h3>
+            <ul className="list-disc list-inside mb-4 text-gray-300">
+              {selectedProject.galardones.map((puesto, competicion, index) => (
+                <li key={index}>{puesto} - {competicion}</li>
+              ))}
+            </ul>
             <h3 className="text-xl font-semibold mb-2 text-teal-300">Galería</h3>
             <div className="grid grid-cols-3 gap-2">
               {selectedProject.galeria.map((imagen, index) => (
