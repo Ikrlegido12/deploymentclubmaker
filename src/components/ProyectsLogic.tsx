@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
 import projectsData from '../data/proyectos.json';
+import './logic.css';
 
 const ProjectsLogic = () => {
   const [projects, setProjects] = useState([]);
@@ -35,7 +36,7 @@ const ProjectsLogic = () => {
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2 text-teal-300">{project.titulo}</h3>
               <p className="text-gray-300">{project.descripcion}</p>
-              <img src={project.imagen} alt={project.titulo} className="w-full h-48 object-cover" />
+              <img src={project.imagen} alt={project.titulo} className="w-full h-48 object-cover" class="imagen" />
             </div>
           </li>
         ))}
