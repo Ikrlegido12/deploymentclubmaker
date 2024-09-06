@@ -1,0 +1,55 @@
+---
+import ProjectsLogic from '../components/ProyectsLogic';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='Proyectos'>
+  <main class="min-h-screen bg-gradient-to-b p-4 sm:p-6 md:p-8">
+    <div class="max-w-4xl mx-auto">
+      <nav class="mb-8">
+        <a 
+          href="https://clubmakerbahia.vercel.app" 
+          class="boton-atras"
+        >
+          <svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" class="volver-atras" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-sm sm:text-base font-medium">Volver a la página principal</span>
+        </a>
+      
+      </nav>
+      <div class="div-titulo">
+      <h1 class="titulo">Proyectos</h1>
+    </div>
+      <p class="info-p">Puedes ver mas detalles de los proyectos dandole click</p>
+      <div class="div-logic">
+        <ProjectsLogic client:load />
+      </div>
+    </div>
+  </main>
+</Layout>
+<style>
+  .volver-atras{
+    color: blue;
+  }
+  .titulo{
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 35px;
+
+  }
+  .div-titulo{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .div-logic{
+    color: white;
+    curosr: pointer;
+  }
+  .info-p{
+    color: white;
+    margin-bottom: 80px;
+  }
+</style>
