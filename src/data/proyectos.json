@@ -1,12 +1,13 @@
 [
     {
       "titulo": "Bird Bot",
-      "descripcion": "Un robot autónomo que sigue una línea negra sobre fondo blanco.",
+      "descripcion": "Un sistema de investigación sobre las aves",
       "descripcionDetallada": "Este robot utiliza sensores infrarrojos para detectar y seguir una línea negra sobre un fondo blanco. Está equipado con un microcontrolador Arduino que procesa las señales de los sensores y controla los motores para mantener el robot en la trayectoria correcta.",
-      "imagen": "/placeholder.svg?height=200&width=300",
-      "galeria": ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
+      "imagen": "/birdbot1.jpg?height=200&width=300",
+      "galeria": ["/birdbot1.jpg?height=400&width=600", "/birdbot2.jpg?height=400&width=600", "/birdbot3.jpg?height=400&width=600", "/birdbot4.jpg?height=400&width=600"],
       "galardones": [
-        { "puesto": "3er lugar", "competicion": "Olimpiada de Robótica", "año": 2021 }
+        { "puesto": "2do lugar", "competicion": "Diverciencia Algeciras", "año": 2024 },
+        { "puesto": "3er lugar", "competicion": "Certamen Jovenes Investigadores", "año": 2024 }
       ],
       "creadores": ["Miguel Fernández", "Elena Torres"],
       "añoCreacion": 2021
