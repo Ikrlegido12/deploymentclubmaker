@@ -4,4 +4,10 @@ img {
     max-height: 325px;
     margin-right: 10px;
     margin-bottom: 10px;
+
+
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }
