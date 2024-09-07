@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkCard from "../components/LinkCard.astro";
+---
+
+<Layout title="Enlaces">
+    <nav class="mb-8">
+        <a 
+          href="https://clubmakerbahia.vercel.app" 
+          class="boton-atras"
+        >
+          <svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" class="volver-atras" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-sm sm:text-base font-medium">Volver a la página principal</span>
+        </a>
+      
+      </nav>
+      <div class="div-titulo">
+        <h1 class="titulo">Enlaces</h1>
+      </div>
+      <div class="link-cards">
+        <LinkCard title="Web Principal" body="La Web del I.E.S. Bahía de Algeciras." logoSrc="/web.svg" href="https://iesbahia.es/"></LinkCard>
+        <LinkCard title="Instagram" body="El Instagram del I.E.S. Bahía de Algeciras." logoSrc="/instagram.svg" href="https://www.instagram.com/iesbahiaalgeciras/"></LinkCard>
+        <LinkCard title="Facebook" body="El Facebook del I.E.S. Bahía de Algeciras." logoSrc="/facebook.svg" href="https://www.facebook.com/iesbahiadealgeciras.algeciras"></LinkCard>
+        
+      </div>
+
+</Layout>
+<style>
+.boton-atras:visited{
+    text-decoration: none;
+    color: rgb(0, 255, 255);
+  }
+  .boton-atras{
+    text-decoration: none;
+    color: rgb(0, 255, 255);
+  }
+  .volver-atras{
+    text-decoration: none;
+    color: rgb(0, 255, 255);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .titulo{
+    color: white;
+    text-align: center;
+
+  }
+  .div-titulo{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .link-cards {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    filter: brightness(0) invert(1);
+  }
+</style>
