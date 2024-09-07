@@ -9,20 +9,20 @@
         { "puesto": "2do lugar🥈", "competicion": "Diverciencia Algeciras", "año": 2024 },
         { "puesto": "3er lugar🥉", "competicion": "Certamen Jovenes Investigadores", "año": 2024 }
       ],
-      "creadores": ["Miguel Fernández", "Elena Torres"],
-      "añoCreacion": 2021
+      "creadores": ["Alumnado: Computación y robótica", "Club Maker 2ºESO"],
+      "añoCreacion": 2024
     },
     {
-      "titulo": "Proyecto de Ejemplo",
+      "titulo": "Polizones en la ZBE",
       "descripcion": "Descripción breve del proyecto.",
       "descripcionDetallada": "Descripción detallada del proyecto.",
       "imagen": "/bahia-cropped.png?height=200&width=300",
-      "galeria": ["/placeholder.svg?height=400&width=600"],
+      "galeria": ["/bahia-cropped.png?height=400&width=600"],
       "galardones": [
-        { "puesto": "1er lugar", "competicion": "Concurso de Innovación", "año": 2022 }
+        { "puesto": "3er lugar🥉", "competicion": "RobyCad", "año": 2023 }
       ],
       "creadores": ["Juan Pérez", "Ana López"],
-      "añoCreacion": 2022
+      "añoCreacion": 2023
     }
   ]
   

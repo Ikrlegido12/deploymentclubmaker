@@ -48,6 +48,7 @@ const ProjectsLogic = () => {
             <ul>
                 <li>
             <h2 className="text-2xl font-bold mb-4 text-teal-300">{selectedProject.titulo}</h2>
+            <p className="text-sm text-gray-400 mb-4">Año de creación: {selectedProject.añoCreacion}</p>
             </li>
             </ul>
             <p className="text-gray-300 mb-4">{selectedProject.descripcionDetallada}</p>
