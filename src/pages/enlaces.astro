@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import LinkCard from "../components/LinkCard.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Enlaces">
@@ -20,9 +20,9 @@ import LinkCard from "../components/LinkCard.astro";
         <h1 class="titulo">Enlaces</h1>
       </div>
       <div class="link-cards">
-        <LinkCard title="Web Principal" body="La Web del I.E.S. Bahía de Algeciras." logoSrc="/web.svg" href="https://iesbahia.es/"></LinkCard>
-        <LinkCard title="Instagram" body="El Instagram del I.E.S. Bahía de Algeciras." logoSrc="/instagram.svg" href="https://www.instagram.com/iesbahiaalgeciras/"></LinkCard>
-        <LinkCard title="Facebook" body="El Facebook del I.E.S. Bahía de Algeciras." logoSrc="/facebook.svg" href="https://www.facebook.com/iesbahiadealgeciras.algeciras"></LinkCard>
+        <Card title="Web Principal" body="La Web del I.E.S. Bahía de Algeciras." href="https://iesbahia.es/"></LinkCard>
+        <Card title="Instagram" body="El Instagram del I.E.S. Bahía de Algeciras." href="https://www.instagram.com/iesbahiaalgeciras/"></LinkCard>
+        <Card title="Facebook" body="El Facebook del I.E.S. Bahía de Algeciras." href="https://www.facebook.com/iesbahiadealgeciras.algeciras"></LinkCard>
         
       </div>
 
@@ -58,4 +58,11 @@ import LinkCard from "../components/LinkCard.astro";
     margin-right: 1rem;
     filter: brightness(0) invert(1);
   }
+  
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
 </style>

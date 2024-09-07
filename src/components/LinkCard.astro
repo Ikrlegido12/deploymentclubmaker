@@ -25,7 +25,7 @@ const { href, title, body, logoSrc } = Astro.props;
 </li>
 
 <style>
-	.link-card {
+		.link-card {
 		list-style: none;
 		display: flex;
 		padding: 1px;
@@ -46,16 +46,6 @@ const { href, title, body, logoSrc } = Astro.props;
 		color: white;
 		background-color: #23262d;
 		opacity: 0.8;
-		display: flex;
-		align-items: center;
-	}
-	.logo {
-		width: 2rem;
-		height: 2rem;
-		margin-right: 1rem;
-	}
-	.content {
-		flex: 1;
 	}
 	h2 {
 		margin: 0;
@@ -72,5 +62,13 @@ const { href, title, body, logoSrc } = Astro.props;
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
+	}
+	.logo {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 1rem;
+	}
+	.content {
+		flex: 1;
 	}
 </style>
