@@ -36,7 +36,7 @@ const ProjectsLogic = () => {
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2 text-teal-300">{project.titulo}</h3>
               <p className="text-gray-300">{project.descripcion}</p>
-              <img src={project.imagen} alt={project.titulo} className="w-full h-48 object-cover" class="imagen" />
+              <img src={project.imagen} alt={project.titulo} className="imagen"/>
             </div>
           </li>
         ))}
@@ -58,7 +58,15 @@ const ProjectsLogic = () => {
               ))}
             </ul>
             <h3 className="text-xl font-semibold mb-2 text-teal-300">Premios</h3>
-            <p>Proximamente...</p>
+{selectedProject.galardones && selectedProject.galardones.length > 0 && (
+  <ul className="list-disc list-inside mb-4 text-gray-300">
+    {selectedProject.galardones.map((galardon, index) => (
+      <li key={index}>
+        {galardon.puesto} en {galardon.competicion} ({galardon.año})
+      </li>
+    ))}
+  </ul>
+)}
             <h3 className="text-xl font-semibold mb-2 text-teal-300">Galería</h3>
             <div className="grid grid-cols-3 gap-2">
               {selectedProject.galeria.map((imagen, index) => (
