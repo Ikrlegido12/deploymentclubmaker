@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Enlaces">
+    <main>
     <nav class="mb-8">
         <a 
           href="https://clubmakerbahia.vercel.app" 
@@ -20,14 +21,20 @@ import Card from "../components/Card.astro";
         <h1 class="titulo">Enlaces</h1>
       </div>
       <div class="link-cards">
+        <ul role="list" class="link-card-grid">
         <Card title="Web Principal" body="La Web del I.E.S. Bahía de Algeciras." href="https://iesbahia.es/"></LinkCard>
         <Card title="Instagram" body="El Instagram del I.E.S. Bahía de Algeciras." href="https://www.instagram.com/iesbahiaalgeciras/"></LinkCard>
         <Card title="Facebook" body="El Facebook del I.E.S. Bahía de Algeciras." href="https://www.facebook.com/iesbahiadealgeciras.algeciras"></LinkCard>
-        
+        </ul>
       </div>
-
+    </main>
 </Layout>
 <style>
+    main{
+        margin: auto;
+		padding: 1.5rem;
+		max-width: 80ch;
+    }
 .boton-atras:visited{
     text-decoration: none;
     color: rgb(0, 255, 255);
@@ -56,7 +63,6 @@ import Card from "../components/Card.astro";
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
-    filter: brightness(0) invert(1);
   }
   
 	.link-card-grid {
