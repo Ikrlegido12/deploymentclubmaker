@@ -18,9 +18,27 @@
       "descripcionDetallada": "Descripción detallada del proyecto.",
       "imagen": "/bahia-cropped.png?height=200&width=300",
       "galeria": ["/bahia-cropped.png?height=400&width=600"],
-      "galardones": [
-        { "puesto": "3er lugar🥉", "competicion": "RobyCad", "año": 2023 }
-      ],
+      "galardones": [{ "puesto": "3er lugar🥉", "competicion": "RobyCad", "año": 2023 }],
+      "creadores": ["Juan Pérez", "Ana López"],
+      "añoCreacion": 2023
+    },
+    {
+      "titulo": "2",
+      "descripcion": "Descripción breve del proyecto.",
+      "descripcionDetallada": "Descripción detallada del proyecto.",
+      "imagen": "/bahia-cropped.png?height=200&width=300",
+      "galeria": ["/bahia-cropped.png?height=400&width=600"],
+      "galardones": [{ "puesto": "3er lugar🥉", "competicion": "RobyCad", "año": 2023 }],
+      "creadores": ["Juan Pérez", "Ana López"],
+      "añoCreacion": 2023
+    },
+    {
+      "titulo": "3",
+      "descripcion": "Descripción breve del proyecto.",
+      "descripcionDetallada": "Descripción detallada del proyecto.",
+      "imagen": "/bahia-cropped.png?height=200&width=300",
+      "galeria": ["/bahia-cropped.png?height=400&width=600"],
+      "galardones": [{ "puesto": "3er lugar🥉", "competicion": "RobyCad", "año": 2023 }],
       "creadores": ["Juan Pérez", "Ana López"],
       "añoCreacion": 2023
     }

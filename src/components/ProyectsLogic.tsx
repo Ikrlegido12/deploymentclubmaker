@@ -59,12 +59,12 @@ const ProjectsLogic = () => {
               ))}
             </ul>
             <h3 className="text-xl font-semibold mb-2 text-teal-300">Premios</h3>
-{selectedProject.galardones && selectedProject.galardones.length > 0 && (
-  <ul className="list-disc list-inside mb-4 text-gray-300">
-    {selectedProject.galardones.map((galardon, index) => (
-      <li key={index}>
-        {galardon.puesto} en {galardon.competicion} ({galardon.año})
-      </li>
+              {selectedProject.galardones && selectedProject.galardones.length > 0 && (
+              <ul className="list-disc list-inside mb-4 text-gray-300">
+                {selectedProject.galardones.map((galardon, index) => (
+                  <li key={index}>
+                {galardon.puesto} en {galardon.competicion} ({galardon.año})
+              </li>
     ))}
   </ul>
 )}
