@@ -1,0 +1,56 @@
+/* General body and layout */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    background-color: #13151a;
+    margin: auto;
+    max-width: 80ch;
+}
+
+h1, h2, p {
+    text-align: center;
+    color: white;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border-top: 1px solid var(--accent-light);
+    background-color: var(--background-color);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 80ch;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.icon:hover img {
+    transform: scale(1.1); /* Pequeña animación al hacer hover */
+}

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import './styles.css'
 ---
 
 <Layout title="Club Maker Bahía">
@@ -31,69 +32,133 @@ import Card from '../components/Card.astro';
 	</main>
 	<footer>
 		<p>&copy; 2024 Club Maker IES Bahía de Algeciras🏫. Todos los derechos reservados.</p>
+		<div class="social-icons">
+			<!-- <a href="https://www.instagram.com" target="_blank" class="icon">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="https://www.facebook.com" target="_blank" class="icon">
+				<i class="fab fa-facebook"></i>
+			</a> -->
+		</div>
 	</footer>
 </Layout>
 
 <style>
-	main {
-		background-color: #13151a;
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 80ch;
-	}
-	h1 {
-		font-size: 3.5rem;
-		font-weight: 800;
-		margin: 0;
-		text-align: center;
-		color: white;
-	}
-	h2 {
-		font-size: 2.5rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-top: 0.5rem;
-		margin-bottom: 2rem;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 2rem 0;
-		border: 1px solid var(--accent-light);
-		background-color: var(--accent);
-		padding: 1.5rem;
-		border-radius: 0.4rem;
-		color: white;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(255, 255, 255, 0.12);
-		color: var(--accent-light);
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: var(--accent-light);
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-	footer {
-		text-align: center;
-		padding: 1rem;
-		margin-top: 2rem;
-		border-top: 1px solid var(--accent-light);
-		color: var(--accent-light);
-	}
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para asegurar que el contenido ocupe todo el alto de la ventana */
+}
+
+main {
+    flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+    background-color: #13151a;
+    margin: auto;
+    max-width: 80ch;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+}
+
+.instructions {
+    line-height: 1.6;
+    margin: 2rem 0;
+    border: 1px solid var(--accent-light);
+    background-color: var(--accent);
+    padding: 1.5rem;
+    border-radius: 0.4rem;
+    color: white;
+}
+
+.instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--accent-light);
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+}
+
+.instructions strong {
+    color: var(--accent-light);
+}
+
+.link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Hace que el footer esté siempre al final del contenido */
+    border-top: 1px solid var(--accent-light);
+    color: var(--accent-light);
+    background-color: var(--background-color); /* Ajusta el color de fondo si es necesario */
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent-light);
+    color: var(--background-color);
+    text-align: center;
+    line-height: 50px;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.icon:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+footer p {
+    margin: 0.5rem 0 0;
+}
+
+/* FontAwesome specific classes */
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+
 </style>
