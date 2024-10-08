@@ -57,7 +57,20 @@ import Layout from '../layouts/Layout.astro';
   .div-logic{
     color: white;
     curosr: pointer;
-  }
+.div-logic {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    gap: 16px; /* Espacio entre columnas */
+    border: 2px solid blue; /* Borde azul */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 16px; /* Espaciado interno */
+}
+
+.div-logic > div {
+    flex: 1 1 calc(33.33% - 16px); /* Tres columnas, ajusta según sea necesario */
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
+}  
+}
   .info-p{
     color: white;
     text-align: center;
