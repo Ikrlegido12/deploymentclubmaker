@@ -3,7 +3,7 @@ import Modal from './Modal';
 import projectsData from '../data/proyectos.json';
 import './logic.css';
 
-const ProjectsLogic = () => {
+const ProjectsLogica = () => {
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,4 +83,4 @@ const ProjectsLogic = () => {
   );
 };
 
-export default ProjectsLogic;
+export default ProjectsLogica;
