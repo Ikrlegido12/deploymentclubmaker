@@ -1,17 +1,10 @@
 import { defineConfig } from 'astro/config';
-
-
 import react from '@astrojs/react';
-
-
-import sentry from '@sentry/astro';
-import spotlightjs from '@spotlightjs/astro';
-
-
 import auth from 'auth-astro';
+import vercel from '@astrojs/vercel';
 
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [react(), sentry(), spotlightjs(), auth()]
+  integrations: [react(), auth()],
+  output: 'server',
+  adapter: vercel(), // Usa el adaptador de Vercel sin '/serverless'
 });
