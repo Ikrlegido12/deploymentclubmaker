@@ -1,54 +1,59 @@
 <footer>
     <p>&copy; 2024 Club Maker IES Bahía de Algeciras🏫. Todos los derechos reservados.</p>
     <div class="social-icons">
-        <!-- <a href="https://www.instagram.com" target="_blank" class="icon">
+        <a href="https://www.instagram.com" target="_blank" class="icon">
             <i class="fab fa-instagram"></i>
         </a>
         <a href="https://www.facebook.com" target="_blank" class="icon">
             <i class="fab fa-facebook"></i>
-        </a> -->
+        </a>
     </div>
 </footer>
+
 <style>
     footer {
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto; /* Hace que el footer esté siempre al final del contenido */
-    border-top: 1px solid var(--accent-light);
-    color: var(--accent-light);
-    background-color: var(--background-color); /* Ajusta el color de fondo si es necesario */
-}
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        border-top: 1px solid var(--accent-light);
+        color: var(--accent-light);
+        background-color: var(--background-color);
+        width: 100%;
+        clear: both;
+    }
 
-/* Social Media Icons */
-.social-icons {
-    margin-bottom: 1rem;
-}
+    /* Social Media Icons */
+    .social-icons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Añadido para separar los iconos */
+    }
 
-.icon {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--accent-light);
-    color: var(--background-color);
-    text-align: center;
-    line-height: 50px;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    transition: background-color 0.3s, color 0.3s;
-}
+    .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--accent-light);
+        color: var(--background-color);
+        font-size: 1.2rem;
+        transition: background-color 0.3s, color 0.3s;
+    }
 
-.icon:hover {
-    background-color: var(--accent);
-    color: white;
-}
+    .icon:hover {
+        background-color: var(--accent);
+        color: white;
+    }
 
-footer p {
-    margin: 0.5rem 0 0;
-}
+    footer p {
+        margin: 0.5rem 0 0;
+    }
 
-/* FontAwesome specific classes */
-.fab {
-    font-family: "Font Awesome 5 Brands";
-}
+    /* FontAwesome specific classes */
+    .fab {
+        font-family: "Font Awesome 5 Brands";
+    }
 </style>
