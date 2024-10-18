@@ -1,0 +1,17 @@
+---
+import Header from "../../components/principal/Header.astro";
+import Footer from "../../components/principal/Footer.astro";
+import { Auth, SignIn, SignOut } from 'auth-astro/components';
+import { getSession } from 'auth-astro/server';
+
+
+const session = await getSession(Astro.request)
+---
+
+{session ? (
+    <p>Bienvenido {session.user?.name}</p>
+    
+  ) : (
+    <p>Inicia la sesión</p>
+    <SignIn provider="google">Iniciar sesión</SignIn>
+  )}
