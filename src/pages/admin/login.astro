@@ -10,6 +10,7 @@ const session = await getSession(Astro.request)
 
 {session ? (
     <p>Bienvenido {session.user?.name}</p>
+    <SignOut>Cerrar sesión</SignOut>
     
   ) : (
     <p>Inicia la sesión</p>

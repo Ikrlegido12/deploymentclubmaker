@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Footer from "../components/principal/Footer.astro";
 import Header from "../components/principal/Header.astro";
+import Footer from "../components/principal/Footer.astro"; // Sigue importando el componente Footer
 ---
 
 <Layout title="Enlaces">
@@ -13,39 +13,41 @@ import Header from "../components/principal/Header.astro";
       </div>
       <div class="link-cards">
         <ul role="list" class="link-card-grid">
-        <Card title="Web Principal" body="La Web del I.E.S. Bahía de Algeciras." href="https://iesbahia.es/"></LinkCard>
-        <Card title="Instagram" body="El Instagram del I.E.S. Bahía de Algeciras." href="https://www.instagram.com/iesbahiaalgeciras/"></LinkCard>
-        <Card title="Facebook" body="El Facebook del I.E.S. Bahía de Algeciras." href="https://www.facebook.com/iesbahiadealgeciras.algeciras"></LinkCard>
+          <Card title="Web Principal" body="La Web del I.E.S. Bahía de Algeciras." href="https://iesbahia.es/"></Card>
+          <Card title="Instagram" body="El Instagram del I.E.S. Bahía de Algeciras." href="https://www.instagram.com/iesbahiaalgeciras/"></Card>
+          <Card title="Facebook" body="El Facebook del I.E.S. Bahía de Algeciras." href="https://www.facebook.com/iesbahiadealgeciras.algeciras"></Card>
         </ul>
       </div>
     </main>
-    <Footer></Footer>
-</Layout>
-<style>
-    main{
-        margin: auto;
-		    padding: 1.5rem;
-		    max-width: 80ch;
-    }
-  .titulo{
-    color: white;
-    text-align: center;
 
-  }
-  .div-titulo{
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .link-cards {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1rem;
-  }
-  
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+    <Footer /> <!-- Usando el componente Footer -->
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        padding: 1.5rem;
+        max-width: 80ch;
+    }
+
+    .titulo {
+        color: white;
+        text-align: center;
+    }
+
+    .div-titulo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .link-cards {
+        margin-right: 1rem;
+    }
+
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
 </style>
