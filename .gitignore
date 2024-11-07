@@ -26,3 +26,5 @@ pnpm-debug.log*
 # NPM and PNPM
 package-lock.json
 pnpm-lock.json
+.idx/
+.vscode/
