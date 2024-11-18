@@ -4,7 +4,7 @@ description: Introducción del Robot OTTO.
 
 # Introducción
 
-> **obot de código abierto con una personalidad épica**\
+> **Robot de código abierto con una personalidad épica**\
 > **Construye y aprende las habilidades del futuro**
 >
 > * Otto DIY
