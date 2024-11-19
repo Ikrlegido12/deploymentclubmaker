@@ -3,8 +3,8 @@
       "titulo": "Bird Bot",
       "descripcion": "Un sistema de investigación sobre las aves",
       "descripcionDetallada": "Este robot utiliza sensores infrarrojos para detectar y seguir una línea negra sobre un fondo blanco. Está equipado con un microcontrolador Arduino que procesa las señales de los sensores y controla los motores para mantener el robot en la trayectoria correcta.",
-      "imagen": "/birdbot1.jpg?height=200&width=300",
-      "galeria": ["/birdbot1.jpg?height=400&width=600", "/birdbot2.jpg?height=400&width=600", "/birdbot3.jpg?height=400&width=600", "/birdbot4.jpg?height=400&width=600"],
+      "imagen": "/projects/birdbot1.jpg?height=200&width=300",
+      "galeria": ["/projects/birdbot1.jpg?height=400&width=600", "/projects/birdbot2.jpg?height=400&width=600", "/projects/birdbot3.jpg?height=400&width=600", "/projects/birdbot4.jpg?height=400&width=600"],
       "galardones": [
         { "puesto": "2do lugar🥈", "competicion": "Diverciencia Algeciras", "año": 2024 },
         { "puesto": "3er lugar🥉", "competicion": "Certamen Jovenes Investigadores", "año": 2024 }
@@ -16,30 +16,20 @@
       "titulo": "Polizones en la ZBE",
       "descripcion": "Descripción breve del proyecto.",
       "descripcionDetallada": "Descripción detallada del proyecto.",
-      "imagen": "/bahia-cropped.png?height=200&width=300",
-      "galeria": ["/bahia-cropped.png?height=400&width=600"],
+      "imagen": "/logos/bahia-cropped.png?height=200&width=300",
+      "galeria": ["/logos/bahia-cropped.png?height=400&width=600"],
       "galardones": [{ "puesto": "3er lugar🥉", "competicion": "RobyCad", "año": 2023 }],
-      "creadores": ["Juan Pérez", "Ana López"],
+      "creadores": ["Alumnado: Computación y robótica", "IES BAHIA"],
       "añoCreacion": 2023
     },
     {
       "titulo": "2",
       "descripcion": "Descripción breve del proyecto.",
       "descripcionDetallada": "Descripción detallada del proyecto.",
-      "imagen": "/bahia-cropped.png?height=200&width=300",
-      "galeria": ["/bahia-cropped.png?height=400&width=600"],
-      "galardones": [{ "puesto": "3er lugar🥉", "competicion": "RobyCad", "año": 2023 }],
-      "creadores": ["Juan Pérez", "Ana López"],
-      "añoCreacion": 2023
-    },
-    {
-      "titulo": "3",
-      "descripcion": "Descripción breve del proyecto.",
-      "descripcionDetallada": "Descripción detallada del proyecto.",
-      "imagen": "/bahia-cropped.png?height=200&width=300",
-      "galeria": ["/bahia-cropped.png?height=400&width=600"],
-      "galardones": [{ "puesto": "3er lugar🥉", "competicion": "RobyCad", "año": 2023 }],
-      "creadores": ["Juan Pérez", "Ana López"],
+      "imagen": "/logos/bahia-cropped.png?height=200&width=300",
+      "galeria": ["/logos/bahia-cropped.png?height=400&width=600"],
+      "galardones": [{ "puesto": "3er lugar🥉", "competicion": "Certamen Jovenes Investigadores", "año": 2023 }],
+      "creadores": ["", ""],
       "añoCreacion": 2023
     }
   ]
