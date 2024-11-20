@@ -1,0 +1,71 @@
+---
+import DiscordIcon from "../ui/DiscordIcon.astro"
+import FacebookIcon from "../ui/FacebookIcon.astro"
+import InstagramIcon from "../ui/InstagramIcon.astro"
+import MenuIcon from "../ui/MenuIcon.astro"
+import XIcon from "../ui/XIcon.astro"
+import YouTubeIcon from "../ui/YouTubeIcon.astro"
+import Image from "astro/components/Image.astro"
+
+interface FooterProps {
+  isInMobileDialog: boolean
+}
+
+let { isInMobileDialog } = Astro.props as FooterProps
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer class={`${!isInMobileDialog ? "mt-[200px]" : ""} text-quinary`}>
+  <div class="line-divider"/>
+  <div class="flex justify-around items-center py-6">
+    <p class="text-center">
+      © 2022-{currentYear} | Todos los derechos reservados | I.E.S. Bahía de Algeciras
+    </p>
+    <ul class="flex justify-center items-center gap-5">
+      <li>
+        <a href="https://twitter.com/GrupoKILAM">
+          <InstagramIcon width="30" height="30" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@GrupoKILAM">
+          <FacebookIcon width="30" height="30" />
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Ikrlegido12">
+          <Image
+            src="/Ikrlegido12.png"
+            alt="Iker - El Dev"
+            width="30"
+            height="30"
+            class="rounded-full"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .line-divider {
+    width: 95vw;
+    height: 5px;
+    background-image: linear-gradient(to left, #DEFFFF00, #DEFFFF, #DEFFFF00);
+  }
+  @media (max-width: 768px) {
+    footer {
+      font-size: .8rem;
+    }
+
+    p {
+      width: 70%;
+    }
+
+    ul {
+      width: 30%;
+      flex-wrap: wrap;
+    }
+  }
+</style>

@@ -29,7 +29,7 @@
       "imagen": "/logos/bahia-cropped.png?height=200&width=300",
       "galeria": ["/logos/bahia-cropped.png?height=400&width=600"],
       "galardones": [{ "puesto": "3er lugar🥉", "competicion": "Certamen Jovenes Investigadores", "año": 2023 }],
-      "creadores": ["", ""],
+      "creadores": ["a", "b"],
       "añoCreacion": 2023
     }
   ]

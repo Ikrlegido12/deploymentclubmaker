@@ -1,0 +1,187 @@
+---
+import MenuIcon from "../ui/MenuIcon.astro"
+import Footer from "./Footer.astro"
+
+let pathname = Astro.url.pathname
+---
+
+<header class="container overflow-x-hidden relative">
+  <nav id="mobile-nav" class="flex justify-center items-center mt-6 gap-[200px] w-full h-[50px] text-[#CDFFFF]">
+    <div class="flex justify-start items-center w-1/2">
+      <a href="/" class="px-4">
+        <img src="/ClubMaker.png" alt="The compressed logo of ClubMaker" width="50px" height="50px">
+      </a>
+    </div>
+    <div class="flex justify-end items-center w-1/2">
+      <button class="px-4" id="menu-button">
+        <MenuIcon />
+      </button>
+    </div>
+  </nav>
+  <nav id="desktop-nav" class="flex justify-evenly items-center w-full text-[#CDFFFF] mt-6">
+    <div class="flex justify-center items-center">
+      <img src="/ClubMakerColored.webp" alt="The logo of ClubMaker" width="300px" height="300px" />
+    </div>
+    <div class="flex justify-center gap-[75px] items-center">
+      <a href="/" class={`${pathname === '/' ? 'actual-page' : ''}`}>INICIO</a>
+      <a href="/about" class={`${pathname === '/about' ? 'actual-page' : ''}`}>PROYECTOS</a>
+      <a href="/portfolio" class={`${pathname === '/portfolio' ? 'actual-page' : ''}`}>ENLACES</a>
+      <a href="/contact" class={`${pathname === '/contact' ? 'actual-page' : ''}`}>TUTORIALES</a>
+    </div>
+  </nav>
+</header>
+
+<dialog id="menu-dialog" class="fixed top-0 left-0 w-full h-full rounded-md">
+  <section class="dialog-content">
+    <section class="flex justify-between mx-8 my-4 items-center gap-10">
+      <h1>Menú</h1>
+      <img src="/ClubMakerColored.webp" alt="The logo of ClubMaker" width="100px" height="100px"/>
+      <button id="close-button" class="close-button">&times;</button>
+    </section>
+    <div class="line-divider"/>
+    <ul class="menu-list">
+      <li><a href="/">Inicio</a></li>
+      <div class="line-divider"/>
+      <li><a href="/about">Nosotros</a></li>
+      <div class="line-divider"/>
+      <li><a href="/portfolio">Proyectos</a></li>
+      <div class="line-divider"/>
+      <li><a href="/contact">Contacto</a></li>
+    </ul>
+    <Footer isInMobileDialog/>
+  </section>
+</dialog>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu-button')
+    const menuDialog = document.getElementById('menu-dialog')
+    const closeButton = document.getElementById('close-button')
+
+    menuButton?.addEventListener('click', () => {
+      console.log('click')
+      menuDialog?.showModal()
+    })
+
+    closeButton?.addEventListener('click', () => {
+      menuDialog.close()
+    })
+
+    menuDialog?.addEventListener('click', (event) => {
+      if (event.target === menuDialog) {
+        menuDialog.close()
+      }
+    })
+  })
+</script>
+
+<style>
+  .line-divider {
+    width: 95vw;
+    height: 5px;
+    background-image: linear-gradient(to left, #DEFFFF00, #DEFFFF, #DEFFFF00);
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+  }
+
+  a {
+    transition: color 0.15s ease-in-out;
+  }
+
+  a:hover {
+    color: #DEFFFFAA;
+  }
+
+  .actual-page {
+    background: linear-gradient(to bottom, #DEFFFF 5%, #007474 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    border-bottom: 4px solid #007474;
+    border-radius: 5px;
+    padding-top: 4px;
+  }
+
+  #mobile-nav {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: flex;
+  }
+
+  #menu-dialog {
+    background-image: radial-gradient(circle, #0D4040 5%, #003737 100%);
+  }
+
+  .menu-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .menu-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #003737;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dialog-content {
+    text-align: center;
+    color: #CDFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .close-button {
+    
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #CDFFFF;
+    cursor: pointer;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-list li {
+    margin: 1.5rem 0;
+  }
+
+  .menu-list a {
+    text-decoration: none;
+    color: #CDFFFF;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  .menu-list a:hover {
+    color: #DEFFFFAA;
+  }
+
+  @media (max-width: 768px) {
+    #mobile-nav {
+      display: flex;
+    }
+
+    #desktop-nav {
+      display: none;
+    }
+  }
+</style>

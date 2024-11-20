@@ -29,6 +29,12 @@ importers:
       auth-astro:
         specifier: ^4.1.2
         version: 4.1.2(@auth/core@0.32.0)(astro@4.16.6(rollup@4.24.0)(typescript@5.6.3))(next@14.2.15(@babel/core@7.25.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      embla-carousel:
+        specifier: ^8.4.0
+        version: 8.4.0
+      embla-carousel-autoplay:
+        specifier: ^8.4.0
+        version: 8.4.0(embla-carousel@8.4.0)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -991,6 +997,14 @@ packages:
 
   electron-to-chromium@1.5.41:
     resolution: {integrity: sha512-dfdv/2xNjX0P8Vzme4cfzHqnPm5xsZXwsolTYr0eyW18IUmNyG08vL+fttvinTfhKfIKdRoqkDIC9e9iWQCNYQ==}
+
+  embla-carousel-autoplay@8.4.0:
+    resolution: {integrity: sha512-AJHXrnaY+Tf4tb/+oItmJSpz4P0WvS62GrW5Z4iFY3zsH0mkKcijzd04LIkj0P4DkTazIBEuXple+nUVmuMsrQ==}
+    peerDependencies:
+      embla-carousel: 8.4.0
+
+  embla-carousel@8.4.0:
+    resolution: {integrity: sha512-sUzm4DGGsdZCom7LEO38Uu6C7oQoFfPorKDf/f7j2EeRCMhHSOt3CvF+pHCaI6N+x5Y8/tfLueJ0WZlgUREnew==}
 
   emoji-regex@10.4.0:
     resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
@@ -3032,6 +3046,12 @@ snapshots:
   dset@3.1.4: {}
 
   electron-to-chromium@1.5.41: {}
+
+  embla-carousel-autoplay@8.4.0(embla-carousel@8.4.0):
+    dependencies:
+      embla-carousel: 8.4.0
+
+  embla-carousel@8.4.0: {}
 
   emoji-regex@10.4.0: {}
 

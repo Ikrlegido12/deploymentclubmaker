@@ -1,0 +1,94 @@
+---
+import ProjectsCarousel from "./ProjectsCarousel.astro";
+---
+
+<section class="intro-container flex flex-col items-center justify-center min-h-screen relative bg-teal-50">
+  <img 
+    src="/RoundedKILAMWhiteBg.avif" 
+    alt=""
+    class="rounded-logo absolute -z-0 top-[5%] -left-[7%]"
+    width="750"
+    height="750"
+  >
+  <section class="z-10 w-full flex justify-center">
+    <img
+      src="/LucasAndKimaniSkins.webp"
+      alt="Kimani and Lucas' skins render"
+      class="w-full max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw]"
+    />
+  </section>
+  <section class="z-10  md:w-[70%] h-full px-4 md:px-0 text-balance">
+    <h1 class="text-3xl text-center md:text-left text-primary">
+      Somos 
+      <strong class="text-3xl font-bold text-terciary">
+        KILAM
+      </strong>
+    </h1>
+    <section class="text-introduction w-[80%]  z-10 text-primary text-pretty">
+      <p>
+        Lorem ipsum dolor, sit amet <strong>consectetur</strong> adipisicing elit. Harum ad assumenda consectetur vero accusamus ex dignissimos fugit, vitae culpa totam rerum alias <strong>neque</strong> dolores incidunt tenetur quisquam sequi facilis quam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis sit magni dignissimos corporis sed laudantium quae obcaecati. Ipsum eius cupiditate <strong>soluta</strong> placeat voluptate tempora, <strong>dignissimos</strong> blanditiis aspernatur <strong>maxime</strong> deleniti tempore.
+      </p>
+      <p>
+        Lorem ipsum dolor sit <strong>amet</strong> consectetur adipisicing elit. Aut velit in doloribus repellendus, consequatur a sed numquam nobis quam dolorum ducimus blanditiis mollitia nam aliquid deleniti tempore alias ipsa. <strong>Dolorum</strong>.
+      </p>
+    </section>
+  </section>
+  <section class="carousel-container z-10 w-full flex flex-col items-center mt-10">
+    <ProjectsCarousel />
+  </section>
+</section>
+
+<style>
+  .intro-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .rounded-logo {
+    opacity: 0.5;
+  }
+  
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1.25rem;
+  }
+
+  p strong {
+    color: #007474;
+  }
+
+  @media (min-width: 768px) {
+    .intro-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-container {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (max-width: 768px) {
+    .rounded-logo {
+      top: 5%;
+      left: 0;
+    }
+
+    .text-introduction {
+      text-align: center;
+      font-size: .9rem;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+</style>

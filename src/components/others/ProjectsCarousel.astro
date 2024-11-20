@@ -1,0 +1,102 @@
+---
+import { projectsInfo } from "../../data/projectsInfo"
+import ProjectSlide from "./ProjectSlide.astro"
+---
+
+<script>
+import EmblaCarousel from 'embla-carousel'
+import type { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
+import Autoplay from 'embla-carousel-autoplay'
+
+const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }
+
+const emblaNode = document.querySelector('.embla') as HTMLElement
+const viewportNode = emblaNode.querySelector('.embla__viewport') as HTMLElement
+const dotsNode = emblaNode.querySelector('.embla__dots') as HTMLElement
+
+const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [Autoplay()])
+
+const onNavButtonClick = (emblaApi: EmblaCarouselType): void => {
+  const autoplay = emblaApi.plugins().autoplay as any
+  if (!autoplay) return
+
+  const resetOrStop =
+    autoplay.options.stopOnInteraction === false
+      ? autoplay.reset
+      : autoplay.stop
+
+  resetOrStop()
+}
+</script>
+
+<section class="embla">
+  <div class="embla__viewport">
+    <div class="embla__container">
+      {
+        projectsInfo.map((project) => (
+          <div class="embla__slide">
+            <div class="embla__slide__project">
+              <ProjectSlide 
+                projectName={project.name}
+                projectPrefix={project.carouselPrefixImage}
+                projectLink={project.link}
+              >
+                {project.description}
+              </ProjectSlide>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .embla {
+    max-width: 60%;
+    margin: auto;
+    mask-image: linear-gradient(to right, #0000 0%, #0002 1%, #000 4%, #000 96%, #0002 99%, #0000 100%);
+    --slide-height: 28rem;
+    --slide-spacing: 3rem;
+    --slide-size: 70%;
+  }
+  .embla__viewport {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+  .embla__slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+  }
+  .embla__slide__project {
+    box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+    border-radius: 1.8rem;
+    font-size: 4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--slide-height);
+    user-select: none;
+  }
+  .embla__controls {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+    gap: 1.2rem;
+    margin-top: 1.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .embla {
+      max-width: 50%;
+      --slide-height: 20rem;
+    }
+  }
+</style>

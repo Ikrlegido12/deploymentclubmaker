@@ -29,19 +29,42 @@ const { title } = Astro.props;
 		--accent-gradient: linear-gradient(45deg, var(--accent-dark), var(--accent-light) 30%, white 60%);
 	}
 
-	html {
-		font-family: system-ui, sans-serif;
-	
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+	@font-face {
+    font-family: 'ITC Avant Garde Pro';
+    src: url(../fonts/ITCAvantGardePro-Md.otf) format('opentype');
+  }
+  html::-webkit-scrollbar {
+    width: 6px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: #DEFFFF;
+    border-radius: 10px;
+  }
+  html::-webkit-scrollbar-track {
+    background-color: #003737;
+  }
+  html::-webkit-scrollbar-thumb:active {
+    background-color: #DEFFFF;
+  }
+  html::-webkit-scrollbar-corner {
+    background-color: #003737;
+  }
+  @supports not selector(::-webkit-scrollbar) {
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #DEFFFF #003737;
+    }
+  }
+  html {
+    background-image: linear-gradient(var(--accent-dark) 0%, var(--accent-light) 50%, var(--accent) 100%);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  body {
+    min-height: 90vh;
+    overflow-x: hidden;
+  }
 </style>
