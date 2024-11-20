@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
-import projectsData from '../data/proyectos.json';
+import projectsData from '../../data/proyectos.json';
 import './logic.css';
 
 const ProjectsLogica = () => {
