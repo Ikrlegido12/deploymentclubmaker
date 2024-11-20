@@ -14,7 +14,7 @@ import Header from '../components/main/Header.astro';
     
       <p class="info-p">Puedes ver mas detalles de los proyectos dandole click</p>
     </div>
-      <div class="div-logica">
+      <div class="div-logic">
         <ProjectsLogic client:load />
       </div>
     </div>
@@ -31,13 +31,13 @@ import Header from '../components/main/Header.astro';
     margin-left: auto;
     margin-right: auto;
   }
-  .div-logica{
+  .div-logic{
     color: white;
     curosr: pointer;
 }
 
 
-.div-logica {
+.div-logic {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
     gap: 16px; /* Espacio entre columnas */
@@ -46,7 +46,7 @@ import Header from '../components/main/Header.astro';
     padding: 16px; /* Espaciado interno */
 }
 
-.div-logica > div {
+.div-logic > div {
     flex: 1 1 calc(33.33% - 16px); /* Tres columnas, ajusta según sea necesario */
     box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
 }  
