@@ -44,7 +44,7 @@ const ProjectsLogica = () => {
 
       {isModalOpen && selectedProject && (
         <Modal onClose={closeModal}>
-          <div className="modal">
+          <div className="modal modalContent">
             <ul>
                 <li>
             <h2 className="text-2xl font-bold mb-4 text-teal-300">{selectedProject.titulo}</h2>
@@ -69,6 +69,7 @@ const ProjectsLogica = () => {
   </ul>
 )}
             <h3 className="text-xl font-semibold mb-2 text-teal-300">Galería</h3>
+            
             <div className="grid grid-cols-3 gap-2">
               {selectedProject.galeria.map((imagen, index) => (
                 <img key={index} src={imagen} alt={`Imagen ${index + 1}`} className="w-full h-24 object-cover rounded" />
@@ -76,6 +77,7 @@ const ProjectsLogica = () => {
             </div>
           </div>
 
+      
         </Modal>
       )}
     </div>
