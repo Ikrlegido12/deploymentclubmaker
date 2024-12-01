@@ -6,6 +6,7 @@
 
 * [Introducción](robot-otto/introduccion.md)
 * [Montaje](robot-otto/montaje.md)
+* [FAQ](robot-otto/faq.md)
 
 ## MICRO:BIT
 
